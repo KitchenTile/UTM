@@ -1,11 +1,10 @@
 import React from "react";
 import './MainPage.css'
+import Header from "../components/header/header";
 
 const MainPage = () => {
     return (
-        <div>
-            <h1> U TEACH MI </h1>
-        </div>
+        <Header />
     );
 };
 
