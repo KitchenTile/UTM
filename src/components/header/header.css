@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.5em;
+}
+
+
+.header .title {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+
+#logo {
+    position: fixed;
+    left: 1em;
+}
