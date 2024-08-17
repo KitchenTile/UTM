@@ -8,7 +8,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 1.5em;
+    margin: 2em;
+    background-color: white;
+
 }
 
 
@@ -18,8 +20,24 @@
     right: 0;
 }
 
+svg {
+    overflow: visible;
+    height: 25px;
+    width: 35px;
+    position: absolute;
+    left: 3em;
+    right: 0;
+}
+
 
 #logo {
     position: fixed;
-    left: 1em;
+    left: 4em;
+}
+
+
+@media (max-width: 600px) {
+    #logo {
+        display: none;
+    }
 }
