@@ -1,0 +1,38 @@
+.navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    align-items: center;
+    flex-direction: row;
+}
+
+.burgerMenu {
+    position: fixed;
+    right: 2em;
+}
+
+.burgerBar {
+    display: block;
+    height: 0.3em;
+    width:  3em;
+    border-radius: 0.5em;
+    background-color: green;
+    margin: 0.4em 0 0.4em 0;
+}
+
+.menu {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
