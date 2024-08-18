@@ -9,8 +9,7 @@
     flex-direction: row;
     align-items: center;
     margin: 2em;
-    background-color: white;
-
+    background-color: black;
 }
 
 
@@ -35,9 +34,22 @@ svg {
     left: 4em;
 }
 
+.burgerMenu {
+    visibility: hidden;
+}
 
-@media (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
     #logo {
         display: none;
     }
+
+    .burgerMenu {
+        visibility: visible;
+    }
+
+    .navLinks {
+        visibility: hidden;
+    }
+
 }
