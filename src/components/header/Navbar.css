@@ -25,14 +25,88 @@
 }
 
 .show {
-    animation: slideDown 0.5s forwards;
+    animation: slideDown 0.5s ease-in-out forwards;
 }
 
 .hidden {
-    animation: slideUp 0.5s forwards;
+    animation: slideUp 0.5s ease-in-out forwards;
 }
 
+.burgerBar.clicked:nth-child(1){
+    animation: firstBarTurn 0.5s ease-in-out forwards;
+}
+.burgerBar.clicked:nth-child(2){
+    animation: secondBarTurn 0.5s ease-in-out forwards;
+}
+.burgerBar.clicked:nth-child(3){
+    animation: thirdBarTurn 0.5s ease-in-out forwards;
+}
 
+.burgerBar.unclicked:nth-child(1){
+    animation: firstBarTurnBack 0.5s ease-in-out forwards;
+}
+.burgerBar.unclicked:nth-child(2){
+    animation: secondBarTurnBack 0.5s ease-in-out forwards;
+}
+.burgerBar.unclicked:nth-child(3){
+    animation: thirdBarTurnBack 0.5s ease-in-out forwards;
+}
+
+/* --------- ANIMATIONS --------- */
+
+@keyframes firstBarTurn {
+    from{
+        transform: none;
+    }
+    to {
+        transform: rotate(45deg) translate(0.5em, 0.5em);
+    }
+}
+
+@keyframes secondBarTurn {
+    from{
+        transform: none;
+    }
+    to {
+        transform: scale(0.1);
+    }
+}
+
+@keyframes thirdBarTurn {
+    from{
+        transform: none;
+    }
+    to {
+        transform: rotate(135deg) translate(-0.5em, 0.5em);
+    }
+}
+
+@keyframes firstBarTurnBack {
+    from{
+        transform: rotate(45deg) translate(0.5em, 0.5em);
+    }
+    to {
+        transform: none
+    }
+}
+
+@keyframes secondBarTurnBack {
+    from {
+        transform: scale(0.1);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes thirdBarTurnBack {
+    from{
+        transform: rotate(135deg) translate(-0.5em, 0.5em);
+    }
+    to {
+        transform: none;
+    }
+}
 
 @keyframes slideDown {
     from {
