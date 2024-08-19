@@ -19,7 +19,7 @@ const Navbar = () => {
             setDisplayClass("burgerBar unclicked");
             setMenuState("menu hidden");
         }
-        setIsClicked(!isClicked)
+        setIsClicked(!isClicked);
     }
 
 
