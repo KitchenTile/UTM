@@ -29,6 +29,7 @@ svg {
 }
 
 .burgerMenu {
+    visibility: hidden;
     position: fixed;
     right: 2em;
     z-index: 999;
@@ -50,10 +51,6 @@ svg {
     position: fixed;
     left: 5.5em;
     /* padding-top: 0.3em; */
-}
-
-.burgerMenu {
-    visibility: hidden;
 }
 
 
