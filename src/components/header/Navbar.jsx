@@ -3,18 +3,18 @@ import "./Navbar.css"
 
 const Navbar = () => {
 
-    const [displayClass, setDisplayClass] = useState("burgerBar unclicked");
-    const [menuState, setMenuState] = useState("menu hidden");
+    const [burgerBarState, setburgerBarState] = useState("burgerBar");
+    const [slidingBarState, setslidingBarState] = useState("slidingBar");
+    const [menuState, setMenuState] = useState("menu");
     const [isClicked, setIsClicked] = useState(false);
 
-    const pages = ["HOME", "SERVICES", "ABOUT", "CONTACT"];
+    const pages = ["HOME", "ABOUT", "FAQ", "CONTACT"];
+    const services = ["TECH CLUB", "TECH CAMP", "BREAKFAST CLUB"];
 
     const toggleMenu = () => {
         if (!isClicked) {
-            setDisplayClass("burgerBar clicked");
+            setburgerBarState("burgerBar clicked");
             setMenuState("menu show");
-            console.log(displayClass);
-            console.log(menuState);
         } else {
             setDisplayClass("burgerBar unclicked");
             setMenuState("menu hidden");
@@ -22,24 +22,33 @@ const Navbar = () => {
         setIsClicked(!isClicked);
     }
 
+    const toggleServices = () => {
+        if (!isClicked) {
+            setDisplayClass("slidingBar clicked");
+            setMenuState("menu show");
 
-    const navLinks = pages.map((page, index) => {
-        return (
-            <a href={'/' + page} key={index}>
-                &nbsp;{page}
-            </a>
-        )
-    })
+        } else {
+            setslidingBarState("slidingBar unclicked");
+            setMenuState("menu hidden");
+        }
+        setIsClicked(!isClicked);
+    }
 
     const BurgerMenu = () => {
         return (
             <>
                 <div className="burgerMenu" onClick={toggleMenu}>
-                    <span className={displayClass}/>
-                    <span className={displayClass}/>
-                    <span className={displayClass}/>
+                    <span className={burgerBarState}/>
+                    <span className={burgerBarState}/>
+                    <span className={burgerBarState}/>
                 </div>
-                <div className={menuState}>{navLinks}</div>
+                <div className={menuState}>
+                <a href='/SERVICES'>SEVICES</a>
+                <a href='/HOME'>HOME</a>
+                <a href='/ABOUT'>ABOUT</a>
+                <a href='/FAQ'>FAQ</a>
+                <a href='/CONTACT'>CONTACT</a>
+                </div>
             </>
         )
     }
@@ -47,7 +56,13 @@ const Navbar = () => {
     return (
         <>
             <BurgerMenu />
-            <div className="navLinks">{navLinks}</div>
+            <div className="navLinks">
+                <div id={slidingBarState} onClick={toggleServices}>SERVICES</div>
+                <a href='/HOME'>HOME</a>
+                <a href='/ABOUT'>ABOUT</a>
+                <a href='/FAQ'>FAQ</a>
+                <a href='/CONTACT'>CONTACT</a>
+            </div>
         </>
     )
    
