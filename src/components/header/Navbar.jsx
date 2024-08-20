@@ -16,7 +16,7 @@ const Navbar = () => {
             setburgerBarState("burgerBar clicked");
             setMenuState("menu show");
         } else {
-            setDisplayClass("burgerBar unclicked");
+            setburgerBarState("burgerBar unclicked");
             setMenuState("menu hidden");
         }
         setIsClicked(!isClicked);
@@ -24,12 +24,12 @@ const Navbar = () => {
 
     const toggleServices = () => {
         if (!isClicked) {
-            setDisplayClass("slidingBar clicked");
-            setMenuState("menu show");
+            slidingBarState("slidingBar clicked");
+            // setMenuState("menu show");
 
         } else {
             setslidingBarState("slidingBar unclicked");
-            setMenuState("menu hidden");
+            // setMenuState("menu hidden");
         }
         setIsClicked(!isClicked);
     }
@@ -43,11 +43,11 @@ const Navbar = () => {
                     <span className={burgerBarState}/>
                 </div>
                 <div className={menuState}>
-                <a href='/SERVICES'>SEVICES</a>
-                <a href='/HOME'>HOME</a>
-                <a href='/ABOUT'>ABOUT</a>
-                <a href='/FAQ'>FAQ</a>
-                <a href='/CONTACT'>CONTACT</a>
+                    <a href='/SERVICES'>SEVICES</a>
+                    <a href='/HOME'>HOME</a>
+                    <a href='/ABOUT'>ABOUT</a>
+                    <a href='/FAQ'>FAQ</a>
+                    <a href='/CONTACT'>CONTACT</a>
                 </div>
             </>
         )
@@ -68,4 +68,4 @@ const Navbar = () => {
    
 }
 
-export default Navbar;
+export default Navbar;
