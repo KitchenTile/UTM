@@ -7,21 +7,46 @@
     align-items: center;
     flex-direction: row;
     font-size: 1.2em;
+    font-weight: 500;
+
+    /* padding-top: 0.5em; */
+}
+
+.navLinks a, .navLinks #slidingBar{
+    color: blue;
 
 }
+
+/* .slidingBar {
+    width: 50%;
+    position: fixed;
+    right: 13em;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.2em;
+    color: blue;
+    font-weight: 500;
+} */
 
 
 .menu {
     display: flex;
     overflow: hidden;
-    margin-top: 0.5em;
-    flex-direction: column;
     align-items: center;
+    margin-top: -1.5em;
+    flex-direction: column;
     justify-content: center;
     gap: 1.5em;
     width: 100%;
     transform: translateY(-120%);
+    opacity: 0;
+    background-color: blue;
+    padding-top: 1em;
+    height: 30vh;
+}
 
+.menu a{
+    color: yellow;
 }
 
 .show {
@@ -30,6 +55,7 @@
 
 .hidden {
     animation: slideUp 0.5s ease-in-out forwards;
+    opacity: 0;
 }
 
 .burgerBar.clicked:nth-child(1){
@@ -53,6 +79,9 @@
 }
 
 /* --------- ANIMATIONS --------- */
+
+
+/*------ MENU BARS ------*/
 
 @keyframes firstBarTurn {
     from{
@@ -108,20 +137,26 @@
     }
 }
 
+/*------ MENU SLIDE ------*/
+
 @keyframes slideDown {
     from {
         transform: translateY(-120%);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes slideUp {
     from {
         transform: translateY(0);
+        opacity: 1;
     }
     to {
         transform: translateY(-120%);
+        opacity: 0;
     }
 }
