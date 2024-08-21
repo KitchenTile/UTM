@@ -3,8 +3,8 @@ import "./Navbar.css"
 
 const Navbar = () => {
 
-    const [burgerBarState, setburgerBarState] = useState("burgerBar");
-    const [slidingBarState, setslidingBarState] = useState("slidingBar");
+    const [burgerBarState, setBurgerBarState] = useState("burgerBar");
+    const [slidingBarState, setSlidingBarState] = useState("slidingBar");
     const [menuState, setMenuState] = useState("menu");
     const [isClicked, setIsClicked] = useState(false);
 
@@ -13,10 +13,10 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         if (!isClicked) {
-            setburgerBarState("burgerBar clicked");
+            setBurgerBarState("burgerBar clicked");
             setMenuState("menu show");
         } else {
-            setburgerBarState("burgerBar unclicked");
+            setBurgerBarState("burgerBar unclicked");
             setMenuState("menu hidden");
         }
         setIsClicked(!isClicked);
@@ -24,12 +24,12 @@ const Navbar = () => {
 
     const toggleServices = () => {
         if (!isClicked) {
-            slidingBarState("slidingBar clicked");
-            // setMenuState("menu show");
+            setSlidingBarState("slidingBar clicked");
+            setMenuState("menu show");
 
         } else {
-            setslidingBarState("slidingBar unclicked");
-            // setMenuState("menu hidden");
+            setSlidingBarState("slidingBar unclicked");
+            setMenuState("menu hidden");
         }
         setIsClicked(!isClicked);
     }
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <span className={burgerBarState}/>
                     <span className={burgerBarState}/>
                 </div>
-                <div className={menuState}>
+                <div className={menuState} id="down">
                     <a href='/SERVICES'>SEVICES</a>
                     <a href='/HOME'>HOME</a>
                     <a href='/ABOUT'>ABOUT</a>
@@ -57,7 +57,12 @@ const Navbar = () => {
         <>
             <BurgerMenu />
             <div className="navLinks">
-                <div id={slidingBarState} onClick={toggleServices}>SERVICES</div>
+                <div className={menuState} id="side">
+                    <a href='/TECHCLUB'>TECH CLUB</a>
+                    <a href='/TECHCAMP'>TECH CAMP</a>
+                    <a href='/BREAKFASTCLUB'>BREAKFAST CLUB</a>
+                </div>
+                <div className={slidingBarState} onClick={toggleServices}>SERVICES</div>
                 <a href='/HOME'>HOME</a>
                 <a href='/ABOUT'>ABOUT</a>
                 <a href='/FAQ'>FAQ</a>
