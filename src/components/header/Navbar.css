@@ -92,6 +92,42 @@
     animation: thirdBarTurnBack 0.5s ease-in-out forwards;
 }
 
+@media only screen and (max-width: 900px) {
+
+    .menu#side {
+        position: fixed;
+        top: 6em;
+        left: -38em;
+        flex-direction: column;
+        transform: translateY(-120%);
+        background-color: blue;
+        justify-content: center;
+        margin-top: -1.5em;
+        padding: 1em;
+        gap: 1.5em;
+        width: 1900px;
+        z-index: -1;
+    }
+
+    .menu#side a{
+        color: yellow;
+    }
+
+    .show#side {
+        animation: slideDown 0.5s ease-in-out forwards;
+    }
+    
+    .hidden#side {
+        animation: slideUp 0.5s ease-in-out forwards;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .menu#down {
+        visibility: hidden;
+    }
+}
 
 
 /*------ MENU BARS ------*/
