@@ -1,33 +1,39 @@
 .navLinks {
     display: flex;
     justify-content: flex-start;
-    width: 70%;
-    position: fixed;
-    left: 20em;
+    width: 63%;
+    margin-left: 3em;
     align-items: center;
     flex-direction: row;
-    font-size: 1.1em;
-    font-weight: 500;
-    gap: 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    gap: 20px;
 }
 
 .navLinks a {
     color: black;
 }
 
-.navLinks .slidingServices, .slidingAbout{
+.navLinks a:hover {
+    color: white;
+}
+
+.slidingServices, .slidingAbout{
     color: black;
     cursor: pointer;
     display: flex;
-    height: 1.5em;
     align-items: center;
     border-radius: 50px;
-    padding: 0.5em 0 0.5em 0.5em;
+    padding: 1em 0 1em 0.5em; /* adjust this for border height */
     animation: colorChange2 0.5s ease-in-out forwards;
-    
+
 }
 
-.slidingAbout.clicked, .slidingServices.clicked{
+/* .slidingAbout:hover, .slidingServices:hover {
+    animation: colorChange2 0.5s ease-in-out forwards;
+} */
+
+.slidingAbout.hovered, .slidingServices.hovered{
     animation: colorChange1 0.5s ease-in-out forwards;
 }
 
@@ -37,23 +43,12 @@
     align-items: center;
     gap: 1.5em;
     width: 100%;
-    opacity: 0;
-    padding: 0.5em;
+    opacity: 1;
+    /* padding: 0.5em; */
     border-radius: 50px;
-    width: 0px; /* Initially collapsed */
-    transition: width 0.5s ease-in-out; /* Animate the width */
+    width: 0px; 
+    transition: width 0.6s ease-in-out; 
 
-}
-
-.menu#down {
-    flex-direction: column;
-    transform: translateY(-120%);
-    height: 30vh; 
-    background-color: blue;
-    justify-content: center;
-    margin-top: -1.5em;
-    padding-top: 1em;
-    gap: 1.5em;
 }
 
 .menu#side {
@@ -61,36 +56,20 @@
     padding: 0.5em;
     flex-direction: row;
     color: blue;
-    width: 0px;
-    /* background: white; */
     justify-content: flex-end;
-    font-size: 0.7em;
+    font-size: 1em;
 }
 
 .link{
     color: black;
     cursor: pointer;
     white-space: nowrap;
-    flex-shrink: 0;
-    /* width: 100px; */
     margin-right: 10px;
-    height: 15px;
-}
+    font-weight: 500;
+    }
 
-
-.menu#down a{
-    color: yellow;
-}
 
 /* --------- ANIMATIONS --------- */
-
-.show#down {
-    animation: slideDown 0.5s ease-in-out forwards;
-}
-
-.hidden#down {
-    animation: slideUp 0.5s ease-in-out forwards;
-}
 
 .show#side{
     /* animation: slideLeft 0.5s ease-in-out forwards; */
@@ -102,111 +81,6 @@
     width: 0px
 }
 
-
-
-.burgerBar.clicked:nth-child(1){
-    animation: firstBarTurn 0.5s ease-in-out forwards;
-}
-.burgerBar.clicked:nth-child(2){
-    animation: secondBarTurn 0.5s ease-in-out forwards;
-}
-.burgerBar.clicked:nth-child(3){
-    animation: thirdBarTurn 0.5s ease-in-out forwards;
-}
-
-.burgerBar.unclicked:nth-child(1){
-    animation: firstBarTurnBack 0.5s ease-in-out forwards;
-}
-.burgerBar.unclicked:nth-child(2){
-    animation: secondBarTurnBack 0.5s ease-in-out forwards;
-}
-.burgerBar.unclicked:nth-child(3){
-    animation: thirdBarTurnBack 0.5s ease-in-out forwards;
-}
-
-
-
-/*------ MENU BARS ------*/
-
-@keyframes firstBarTurn {
-    from{
-        transform: none;
-    }
-    to {
-        transform: rotate(45deg) translate(0.5em, 0.5em);
-    }
-}
-
-@keyframes secondBarTurn {
-    from{
-        transform: none;
-    }
-    to {
-        transform: scale(0.1);
-    }
-}
-
-@keyframes thirdBarTurn {
-    from{
-        transform: none;
-    }
-    to {
-        transform: rotate(135deg) translate(-0.5em, 0.5em);
-    }
-}
-
-@keyframes firstBarTurnBack {
-    from{
-        transform: rotate(45deg) translate(0.5em, 0.5em);
-    }
-    to {
-        transform: none
-    }
-}
-
-@keyframes secondBarTurnBack {
-    from {
-        transform: scale(0.1);
-    }
-    to {
-        transform: none;
-    }
-}
-
-@keyframes thirdBarTurnBack {
-    from{
-        transform: rotate(135deg) translate(-0.5em, 0.5em);
-    }
-    to {
-        transform: none;
-    }
-}
-
-/*------ MENU SLIDE DOWN ------*/
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-120%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-
-    }
-
-    100% {
-        transform: translateY(-120%);
-        opacity: 0;
-    }
-}
 
 /*------ MENU SLIDE SIDE ------*/
 
@@ -253,49 +127,5 @@
     to {
         background-color: none;
 
-    }
-}
-
-
-
-
-
-
-
-@media only screen and (max-width: 900px) {
-
-    .menu#side {
-        position: fixed;
-        top: 6em;
-        left: -38em;
-        flex-direction: column;
-        transform: translateY(-150%);
-        background-color: blue;
-        justify-content: center;
-        margin-top: -1.5em;
-        padding: 1em;
-        gap: 1.5em;
-        width: 1900px;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .menu#side a{
-        color: yellow;
-    }
-
-    .show#side {
-        animation: slideDown 0.5s ease-in-out forwards;
-    }
-    
-    .hidden#side {
-        animation: slideUp 0.5s ease-in-out forwards;
-    }
-
-}
-
-@media only screen and (min-width: 700px) {
-    .menu#down {
-        visibility: hidden;
     }
 }
