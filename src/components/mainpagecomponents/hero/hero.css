@@ -1,0 +1,42 @@
+.HeroDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5225EE;
+
+}
+
+#Herologo {
+    width: 726px;
+    margin-bottom: 2.5em;
+    z-index: 1;
+}
+
+#OrangeBlob {
+    width: 726px;
+    position: absolute;
+    right: 0px;
+    top: 64px;
+}
+
+#MintBlob {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+}
+
+.textDiv {
+    text-align: center;
+    max-width:1000px;
+    z-index: 1;
+}
+
+.textDiv h2{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-weight: 600;   
+}
