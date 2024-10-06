@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./header.css";
 import BurgerMenu from "./BurgerMenu";
 import Navbar from "./Navbar";
-import UTMLogo from "../../../assets/UTM.svg"
-import Facebook from "../../../assets/Facebook.svg"
-import Instagram from "../../../assets/Instagram.svg"
+import UTMLogo from "../../../assets/SVGs/UTM.svg"
+import Facebook from "../../../assets/SVGs/Facebook.svg"
+import Instagram from "../../../assets/SVGs/Instagram.svg"
 
 const Header = () => {
     const [activeSection, setActiveSection] = useState(null);
