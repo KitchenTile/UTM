@@ -22,11 +22,36 @@
     top: 64px;
 }
 
+#Student {
+    position: absolute;
+    left: 220px;
+    top: 650px;
+    z-index: 2;
+}
+
+#Twirl {
+    position: absolute;
+    left: 0;
+    top: 250px;
+}
+
 #MintBlob {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 500px;
+    width: 480px;
+}
+
+#ArrowTwirl {
+    position: absolute;
+    right: 0;
+    top: 600px;
+}
+
+#Desk {
+    position: absolute;
+    right: 150px;
+    top: 500px;
 }
 
 .textDiv {
@@ -39,4 +64,12 @@
     margin-block-end: 0px;
     margin-block-start: 0px;
     font-weight: 600;   
+}
+
+.HeroSvgTextDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 4em;
 }
