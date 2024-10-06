@@ -1,0 +1,52 @@
+.moreOnUsContainer  {
+    height: calc(100vh - 6em);
+    background-color: #00CE94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.moreOnUsContainer  img{
+    height: 75%;
+}
+
+
+.moreOnUsText {
+    width: 371px;
+    margin: auto;
+}
+
+.moreOnUsText h1{
+    font-size: 44px;
+}
+
+.moreOnUsText p{
+    font-size: 20px;
+}
+
+.moreOnUsText button {
+    width: 100%;
+    border-radius: 50px;
+    border: 2px dashed white;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .moreOnUsText button:hover {
+    background-color: #F47A62;
+  }
+
+  /* SVGs */
+   #MoreOnUsTwirls {
+    position: absolute;
+    left: 0;
+    top: 1540px;
+    width: 170px;
+   }

@@ -1,0 +1,70 @@
+.servicesContainer {
+    height: calc(100vh - 5.5em);
+    background-color: #5225EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.textPicContainer {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainText h1{
+    font-size: 44px;
+}
+
+.mainText p{
+    width: 680px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.picturesContainer{
+    display: flex;
+    gap: 40px;
+}
+
+.pictureButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pictureButton button {
+    border-radius: 50px;
+    border: 2px dashed white;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .pictureButton button:hover {
+    background-color: #F47A62;
+  }
+
+
+/* SVGs */
+
+#ReverseTwirl {
+    position: absolute;
+    right: 0;
+    top: 1250px;
+}
