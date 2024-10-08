@@ -9,12 +9,7 @@
     flex-direction: row;
     align-items: center;
     background-color: #FDBA17;    
-    /* border-bottom: 1px solid black; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-#logoSvg{
-    margin-left: 3.5em
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.3);
 }
 
 .social-icons {
@@ -39,16 +34,40 @@
 }
 
 .social-icons a:hover path, .social-icons a:hover {
-     stroke: white;
+     stroke: #F47A62;
 }
 
 .social-icons a:hover #youtube{
-    fill: white;
+    fill: #F47A62;
 }
 
+/* SVGs */
 
-#logo {
-    position: fixed;
-    left: 5.5em;
+#logoSvg{
+    margin-left: 3.5em
 }
 
+#UTMobile {
+    display: none;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 700px) {
+
+    #UTMobile {
+        display: inline;
+    }
+
+    #logoSvg{
+        display: none;
+    }
+
+    .social-icons{
+        position: relative;
+        margin-right: 0;
+    }
+    .header{
+        justify-content: space-around;
+    }
+}

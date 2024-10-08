@@ -51,7 +51,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                         ))}
                     </div>
                 </div>
-                <a href='/ACCOUNT'>Account</a>
+                <a href='/ACCOUNT' id="account">Account</a>
             </div>
         </>
     );

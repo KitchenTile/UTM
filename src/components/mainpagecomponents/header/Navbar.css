@@ -11,17 +11,21 @@
 }
 
 .navLinks a {
-    color: black;
+    color: white;
     font-weight: 700;
     text-decoration: none;
 }
 
 .navLinks a:hover {
-    color: white;
+    color: #FDBA17;
+}
+
+.navLinks a:hover#account {
+    color: #F47A62;
 }
 
 .slidingServices, .slidingAbout{
-    color: black;
+    color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -36,6 +40,7 @@
 } */
 
 .slidingAbout.hovered, .slidingServices.hovered{
+    color: #FDBA17;
     animation: colorChange1 0.5s ease-in-out forwards;
 }
 
@@ -50,14 +55,12 @@
     border-radius: 50px;
     width: 0px; 
     transition: width 0.6s ease-in-out; 
-
 }
 
 .menu#side {
     opacity: 1;
     padding: 0.5em;
     flex-direction: row;
-    color: blue;
     justify-content: flex-end;
     font-size: 1em;
 }
@@ -86,31 +89,6 @@
 
 /*------ MENU SLIDE SIDE ------*/
 
-@keyframes slideLeft {
-    from {
-        width: 0px;
-        opacity: 0;
-    }
-    to {
-        width: 300px;
-        opacity: 1;
-
-    }
-}
-
-@keyframes slideRight {
-    from {
-        width: 300px;
-        opacity: 1;
-
-    }
-    to {
-        width: 0px;
-        opacity: 0;
-
-    }
-    
-}
 @keyframes colorChange1 {
     from {
         background-color: none;
@@ -129,5 +107,13 @@
     to {
         background-color: none;
 
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .navLinks{
+        display: none;
     }
 }
