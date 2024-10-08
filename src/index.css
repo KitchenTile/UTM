@@ -13,8 +13,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+button {
+  width: 100%;
+  border-radius: 50px;
+  border: 2px dashed white;
+  padding: 0.4em 0.8em;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #F47A62;
+}
+
+
