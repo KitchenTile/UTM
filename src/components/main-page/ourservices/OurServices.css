@@ -1,0 +1,131 @@
+.servicesContainer {
+    height: calc(100vh - 5.5em);
+    position: relative;
+    background-color: #5225EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.textPicContainer {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainText h1{
+    font-size: 44px;
+    margin-block: 0.67em;
+}
+
+.mainText p{
+    width: 680px;
+    font-size: 20px;
+    text-align: center;
+    margin-block: 2em;
+}
+
+.picturesContainer{
+    display: flex;
+    gap: 40px;
+}
+
+.pictureButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.pictureButton button {
+    border-radius: 50px;
+    border: 2px dashed white;
+    padding: 0.4em 0.8em;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pictureButton button:hover {
+    background-color: #F47A62;
+  }
+
+
+/* SVGs */
+
+#ReverseTwirl {
+    position: absolute;
+    right: 0;
+    top: 350px;
+    width: 11.5vw;
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    .servicesContainer {
+        height: 100%;
+        background-color: #5225EE;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        padding-bottom: 4em;
+    }
+
+    .textPicContainer {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+
+    .mainText{
+        margin-bottom: 5em;
+    }
+
+    .mainText h1{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .mainText p{
+        width: 100vw;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .picturesContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 77.5vw;
+    }
+
+    .pictureButton button {
+        width: 90%;
+      }
+
+
+    #ReverseTwirl {
+        display: none;
+    }
+    
+}
+
+

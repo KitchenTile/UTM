@@ -1,0 +1,22 @@
+.findSchoolsContainer  {
+    height: calc(100vh - 5.5em);
+    background-color: #FDBA17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.mapInputDiv {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.mapDiv #map{
+    border: 15px solid #F47A62;
+    border-radius: 70px;
+}

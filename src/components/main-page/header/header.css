@@ -1,0 +1,92 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FDBA17;    
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.3);
+}
+
+.social-icons {
+    display: flex;    
+    position: fixed;
+    right: 0;           
+    gap: 25px;                  
+    align-items: center;   
+    margin-right: 4em;  
+    opacity: 1;
+}
+.social-icons.Hidden {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+
+.social-icons a, .social-icons svg, .social-icons img {
+    width: 27px;   
+    height: 27px;              
+}
+
+.social-icons a:hover path, .social-icons a:hover {
+     stroke: #F47A62;
+}
+
+.social-icons a:hover #youtube{
+    fill: #F47A62;
+}
+
+/* SVGs */
+
+#logoSvg{
+    margin-left: 3.5em
+}
+
+#Ulogo {
+    display: none;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 700px) {
+
+    #Ulogo {
+        display: inline;
+        margin-left: 2em;
+    }
+
+    #logoSvg{
+        display: none;
+    }
+
+    .social-icons{
+        display: none;
+    }
+    .header{
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header{
+        width: 100vw;
+    }
+
+    #Ulogo {
+        display: inline;
+        margin-left: 2em;
+    }
+
+    #logoSvg{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-between;
+    }
+}
+

@@ -1,0 +1,172 @@
+:root {
+  /* Colors */
+  --red: #fa7a62;
+  --red-secondary: #fabdb1;
+  --yellow: #fdba17;
+  --yellow-secondary: #fedd8b;
+  --primary-text: #313131;
+  --header-label: #616161;
+  --secondary-text: #929292;
+  --background-table: #f6f5f8;
+}
+
+.Formbody {
+  background-color: var(--yellow);
+}
+
+.Formcontainer {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px 100px;
+}
+
+.FormtextSection {
+  display: flex;
+  max-width: 50%;
+  flex-direction: column;
+  gap: 1px;
+  background-color: var(--yellow);
+}
+
+.Formh1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.Formh2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.Formp {
+  width: 60%;
+  line-height: 25px;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.Formsection {
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+  height: 68vh;
+  max-height: 500px;
+  background-color: var(--yellow);
+}
+
+.Formform {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--background-table);
+  padding: 20px 10px;
+  height: 100%;
+  min-width: 300px;
+  border-radius: 16px;
+  outline: var(--red) 10px solid;
+}
+
+.Formblock input,
+.Forminput textarea {
+  padding: 10px 20px;
+  font-size: 10px;
+  width: 100%;
+  border: 2px solid var(--red);
+  border-radius: 32px;
+  background-color: var(--background-table);
+  color: black;
+  resize: none;
+}
+
+.Forminput textarea {
+  height: 200px;
+}
+
+.Formblock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Formblock input {
+  width: 47%;
+  height: 33px;
+}
+
+.Formbutton {
+  border: 2px dashed var(--red);
+  margin: 0 auto;
+  padding: 1px 10px;
+  height: 40px;
+  border-radius: 35px;
+  background-color: transparent;
+  color: var(--red);
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 40px;
+  width: 220px;
+}
+
+.Formbutton:hover {
+  background-color: var(--red);
+  color: var(--background-table);
+  border: var(--background-table) 2px dashed;
+}
+
+.Forminput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (min-width:1920px) {
+  .FormtextSection {
+    margin-left: 300px;
+    width: 27%;
+  }
+
+
+}
+
+@media (min-width:1024px) {
+  .Forminput textarea {
+    height: 150px;
+  }
+
+  .Formbutton {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Formcontainer {
+    flex-direction: column;
+    padding: 0px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .Formp {
+    width: 100%;
+  }
+
+  .Formsection {
+    max-width: 400px;
+  }
+
+  .Formform {
+    width: 100%;
+    margin: 0 auto;
+    height: 370px;
+  }
+
+  .Forminput textarea {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .Formsection button {
+    margin-top: 30px;
+  }
+}
