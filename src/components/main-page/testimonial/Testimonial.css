@@ -30,8 +30,8 @@
 
 .Testimonial-container {
     text-align: center;
-    padding: 100px;
-    min-height: 100vh; /* Takes up the full viewport height */
+    padding: 50px;
+    min-height: 92vh; /* Takes up the full viewport height */
     justify-content: center;
     background-color: #feffff;
     position: relative;
@@ -47,15 +47,29 @@
   
 .Testimonial-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling experience */
+    padding-bottom: 20px;
+    scroll-padding: 20px;
   }
-  
+
+  .Testimonial-cards::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+}
+
+.Testimonial-cards::-webkit-scrollbar-thumb {
+    background-color: var(--inactive); /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+
 /* Each card to take 44% of screen height */
 .Testimonial-card {
-    width: 340px;
+    min-width: 265px;
+    max-width: 340px;
     height: 450px; /* 44% of the screen height */
     padding: 10px;
     border: 1px solid #ccc;
@@ -200,3 +214,52 @@
     right: 0;
     bottom: 50px;
   }
+
+  @media (max-width: 768px) {
+
+    .arrow {
+        top: 70%;
+    }
+
+    .TestimonialSvgTopLeft, .TestimonialSvgBottomRight, .Testimonial-button {
+        display: none;
+    }
+
+    .Testimonial-container {
+        padding: 25px; /* Reduce padding for smaller screens */
+    }
+
+    .Testimonial-cards {
+        justify-content: flex-start; /* Align cards to the start */
+        gap: 10px; /* Reduce gap for smaller screens */
+        padding-left: 0px;
+    }
+
+    .Testimonial-card {
+        min-width: 265px; /* Ensure cards stay visible within the scroll area */
+        width: 265px;
+        height: 400px; /* Slight reduction in card height for smaller screens */
+    }
+
+    .carousel-image {
+        top: 240px; /* Adjust carousel image positioning for smaller cards */
+    }
+
+    .card-1, .card-1{
+        background-position: -0% 100%;
+      }
+
+    .card-3 {
+        background-position: 4% 82%;
+    }
+
+    .Testimonial-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+  .Testimonial-title {
+    font-size: 25px;
+  }
+}

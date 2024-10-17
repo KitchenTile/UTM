@@ -9,6 +9,9 @@
     background-color: inherit;
     cursor: text;
     transition: background-color 0.3s;
+    display: flex;
+    margin: auto;
+
   }
   
   .input:hover {
@@ -18,3 +21,11 @@
   .inputDiv {
     width: 331px;
   }
+
+  @media only screen and (max-width: 425px) {
+    .inputDiv{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+}

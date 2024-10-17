@@ -8,6 +8,8 @@
   --header-label: #616161;
   --secondary-text: #929292;
   --background-table: #f6f5f8;
+  /* Base font size for scaling */
+  --base-font-size: 16px;
 }
 
 .Formbody {
@@ -17,75 +19,102 @@
 .Formcontainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  padding: 10px 100px;
+  padding: 10px;
+  text-align: left;
+  position: relative;
 }
 
 .FormtextSection {
   display: flex;
-  max-width: 50%;
   flex-direction: column;
-  gap: 1px;
+  gap: 10px;
+  max-width: 40%;
+  margin-left: 3%;
   background-color: var(--yellow);
 }
 
 .Formh1 {
+  display: none;
   font-size: 2rem;
   margin-bottom: 30px;
 }
 
 .Formh2 {
-  font-size: 1rem;
+  font-size: 30px;
   letter-spacing: 1px;
 }
 
 .Formp {
-  width: 60%;
-  line-height: 25px;
-  font-size: 0.75rem;
+  line-height: 1.5;
+  font-size: 20px;
   margin-bottom: 20px;
+  width: 80%;
+}
+
+.Formfaqbtn {
+  padding: 10px 15px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 2px dashed var(--background-table);
+  border-radius: 32px;
+  width: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Formfaqbtn:hover {
+  background-color: var(--red);
 }
 
 .Formsection {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  max-width: 40%;
-  height: 68vh;
-  max-height: 500px;
   background-color: var(--yellow);
+
 }
 
 .Formform {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; 
+  justify-content: space-between; 
   background-color: var(--background-table);
-  padding: 20px 10px;
-  height: 100%;
-  min-width: 300px;
+  padding: 20px;
   border-radius: 16px;
-  outline: var(--red) 10px solid;
+  border: 10px solid var(--red);
+  min-width: 350px;
+  max-width: 500px;
+  box-sizing: border-box;
+  aspect-ratio: 0.96;
+  height: 500px;
 }
 
 .Formblock input,
 .Forminput textarea {
   padding: 10px 20px;
-  font-size: 10px;
-  width: 100%;
+  font-size: 12px;
   border: 2px solid var(--red);
   border-radius: 32px;
   background-color: var(--background-table);
-  color: black;
   resize: none;
+  color: black;
+  box-sizing: border-box;
 }
 
 .Forminput textarea {
-  height: 200px;
+  height: 150px;
+  width: 100%;
 }
 
 .Formblock {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .Formblock input {
@@ -93,9 +122,17 @@
   height: 33px;
 }
 
+
+.FormbuttonContainer {
+  margin-top: auto; 
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; 
+}
+
+
 .Formbutton {
   border: 2px dashed var(--red);
-  margin: 0 auto;
   padding: 1px 10px;
   height: 40px;
   border-radius: 35px;
@@ -103,8 +140,9 @@
   color: var(--red);
   cursor: pointer;
   font-size: 20px;
-  margin-top: 40px;
-  width: 220px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Formbutton:hover {
@@ -113,60 +151,126 @@
   border: var(--background-table) 2px dashed;
 }
 
-.Forminput {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-@media (min-width:1920px) {
+/* Media Queries */
+@media (min-width: 1440px) {
   .FormtextSection {
-    margin-left: 300px;
-    width: 27%;
-  }
-
-
-}
-
-@media (min-width:1024px) {
-  .Forminput textarea {
-    height: 150px;
-  }
-
-  .Formbutton {
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 900px) {
-  .Formcontainer {
-    flex-direction: column;
-    padding: 0px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .Formp {
-    width: 100%;
+    max-width: 35%;
+    margin-left: 2%;
   }
 
   .Formsection {
-    max-width: 400px;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .Formcontainer {
+    justify-content: space-between;
+  }
+
+  .FormtextSection {
+    max-width: 45%;
+    margin-left: 3%;
+  }
+
+  .Formsection {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .Forminput textarea {
+    height: 150px;
+  }
+}
+
+@media (max-width: 950px) {
+  .Formcontainer {
+    justify-content: space-between;
+  }
+
+  .FormtextSection {
+    width: 50%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .Formsection {
+    width: 45%;
   }
 
   .Formform {
     width: 100%;
+    height: calc(90% / 0.96);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: calc(var(--base-font-size) * 0.9);
+  }
+
+  .Formcontainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .FormtextSection p, .FormtextSection h2, .Formfaqbtn {
+    display: none;
+  }
+
+  .Formh1 {
+    display: inline-block;
+  }
+
+  .FormtextSection {
+    text-align: center;
+  }
+
+  .Formsection {
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
     margin: 0 auto;
-    height: 370px;
+  }
+
+  .Formform {
+    width: 100%; 
+    min-width: 300px;
+    height: auto;
+    aspect-ratio: 0.96;
+    padding: 20px;
   }
 
   .Forminput textarea {
-    height: 100px;
-    margin-bottom: 20px;
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .Formsection button {
-    margin-top: 30px;
+  .Formblock {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .Formbutton {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 425px) {
+  .FormtextSection h1 {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .FormtextSection {
+    min-width: 300px;
   }
 }

@@ -1,11 +1,13 @@
 .findSchoolsContainer  {
     height: calc(100vh - 5.5em);
-    background-color: #FDBA17;
+    background-color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100vw;
+    /* min-height: 100vh;
+    padding: 100px; */
 }
 
 .mapInputDiv {
@@ -16,7 +18,73 @@
     margin: auto;
 }
 
-.mapDiv #map{
-    border: 15px solid #F47A62;
-    border-radius: 70px;
+.mapInputDiv h1,
+.mapInputDiv button{
+    margin: 0.67em 0;
 }
+
+.mapDiv #map{
+    border: 15px solid var(--red);
+    border-radius: 70px;
+    width: 500px;
+    height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .findSchoolsContainer  {
+        height: 100%;
+    }
+
+    .mapInputDiv {
+        flex-direction: column;
+        align-items: center;
+        margin: 5vh 0;
+    }
+
+    .mapDiv #map{
+        border: 10px solid var(--red);
+        border-radius: 50px;
+        width: 360px;
+        height: 360px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 425px) {
+
+    .findSchoolsContainer  {
+        height: 100%;
+    }
+
+    .mapInputDiv {
+        flex-direction: column;
+        align-items: center;
+        margin: 5vh 0;
+    }
+
+    .mapDiv #map{
+        border: 10px solid var(--red);
+        border-radius: 50px;
+        width: 360px;
+        height: 360px;
+    }
+    
+}
+
+
+
+
+
+
+@media only screen and (max-height: 850px) {
+
+    .findSchoolsContainer  {
+        min-height: 100vh;
+        padding: 100px 0;
+
+    }
+    
+}
+

@@ -1,0 +1,99 @@
+.techAdventureContainer{
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    gap: 70px;
+    justify-content: center;
+}
+
+.textContainer {
+    max-width: 37vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 283px;
+}
+
+.imgContainer img{
+    max-width: 50vw;
+}
+
+.textContainer h1{
+    font-size: 40px;
+    line-height: 46px;
+}
+
+.textContainer p{
+    font-size: 20px;
+    margin-block: 1.3em;
+}
+
+.textContainer button{
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 1086px) {
+
+    .textContainer {
+        max-width: 50%;
+    }
+    
+    .textContainer h1{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .textContainer p{
+        font-size: 18px;
+        margin-block: 0.7em;
+    }
+
+    .textContainer button{
+        width: 100%;
+    }
+    
+
+}
+
+
+
+@media only screen and (max-width: 425px) {
+
+    .techAdventureContainer{
+        background-color: var(--blue);
+        display: flex;
+        flex-direction: column;
+        padding:70px 0;
+        gap: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgContainer img{
+        max-width: 80vw;
+    }
+
+    .textContainer {
+        max-width: 80vw;
+        text-align: center;
+
+    }
+    
+    .textContainer h1{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .textContainer p{
+        font-size: 18px;
+        margin-block: 1.5em;
+    }
+
+    .textContainer button{
+        width: 100%;
+    }
+    
+}
+

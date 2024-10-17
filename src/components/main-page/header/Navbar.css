@@ -24,24 +24,25 @@
     color: #F47A62;
 }
 
+
+/* sliding submenues */
 .slidingServices, .slidingAbout{
     color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     border-radius: 50px;
-    padding: 1em 0 1em 0.5em; /* adjust this for border height */
-    animation: colorChange2 0.5s ease-in-out forwards;
+    padding: 1em 0 1em 0.5em; 
+    transition: background-color 0.5s ease-in-out; 
 
 }
 
-/* .slidingAbout:hover, .slidingServices:hover {
-    animation: colorChange2 0.5s ease-in-out forwards;
-} */
+/* when hovered */
 
-.slidingAbout.hovered, .slidingServices.hovered{
-    color: #FDBA17;
-    animation: colorChange1 0.5s ease-in-out forwards;
+.slidingAbout.hovered,
+.slidingServices.hovered {
+    color: var(--yellow); 
+    background-color: var(--red); 
 }
 
 .menu {
@@ -51,7 +52,6 @@
     gap: 1.5em;
     width: 100%;
     opacity: 1;
-    /* padding: 0.5em; */
     border-radius: 50px;
     width: 0px; 
     transition: width 0.6s ease-in-out; 
@@ -74,44 +74,17 @@
     }
 
 
-/* --------- ANIMATIONS --------- */
-
 .show#side{
-    /* animation: slideLeft 0.5s ease-in-out forwards; */
     width: auto;
 }
 
 .hidden#side {
-    /* animation: slideRight 0.5s ease-in-out forwards; */
     width: 0px
 }
 
 
-/*------ MENU SLIDE SIDE ------*/
 
-@keyframes colorChange1 {
-    from {
-        background-color: none;
-    }
-    to {
-        background-color: #F47A62;
-
-    }
-}
-
-@keyframes colorChange2 {
-    from {
-        background-color: #F47A62;
-
-    }
-    to {
-        background-color: none;
-
-    }
-}
-
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
 
     .navLinks{
         display: none;

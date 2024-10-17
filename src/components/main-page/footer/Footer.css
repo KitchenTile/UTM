@@ -97,7 +97,7 @@ footer .two {
   border-radius: 0px;
 }
 
-.two .bold {
+footer .two .bold {
   margin-bottom: 31px;
 }
 
@@ -109,7 +109,7 @@ footer li {
   font-size: var(--body);
 }
 
-.bold {
+footer .bold {
   font-weight: bold;
   cursor: default;
 }
@@ -175,8 +175,26 @@ footer button:hover {
 
   .img-wrapper {
     align-items: center;
-    flex-direction: row;
+    flex-direction: column-reverse;
     gap: 20px;
     margin-top: 30px;
   }
 }
+  @media (max-width: 425px) {
+    footer .img-wrapper {
+      flex-direction: column-reverse;
+    }
+
+    footer img {
+      height: 75px;
+    }
+
+    footer .one {
+      gap: 10px;
+    }
+    .list-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-width: 314px;
+    }
+  }

@@ -22,7 +22,7 @@ const Header = () => {
         setActiveSection={setActiveSection}
       />
 
-      <SocialIcons activeSection={activeSection} />
+      <SocialIcons activeSection={activeSection} id="desktop"/>
       <BurgerMenu />
     </div>
   );

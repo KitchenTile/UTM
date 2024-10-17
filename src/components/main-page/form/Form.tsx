@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import './Form.css';
+import { useState } from "react";
+import "./Form.css";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
@@ -19,9 +19,9 @@ const Form = () => {
     // Here you would handle sending the email, either via a service or API call
     try {
       // Call your email service or backend here
-      alert('Email Sent!');
+      alert("Email Sent!");
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
     }
   };
 
@@ -30,24 +30,22 @@ const Form = () => {
       <div className="Formcontainer">
         <div className="FormtextSection">
           <h1 className="Formh1">What can we help you with?</h1>
-          <h2 className="Formh2">Finding the right course for your child</h2>
+          <h2 className="Formh2">Questions about the programs</h2>
           <p className="Formp">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes
+            The programs will vary from different schools. If you would like to
+            know more detail feel free to reach out!
           </p>
-          <h2 className="Formh2">Send your enquiries to us</h2>
+          <h2 className="Formh2">Inquire to us</h2>
           <p className="Formp">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes
+            Got a question? Check out our FAQs or send us a message!
           </p>
-          <h2 className="Formh2">Refunding</h2>
+          <h2 className="Formh2">Request a refund</h2>
           <p className="Formp">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes
+            You can request a refund by completing our form. We will process the
+            refund according to the rules of your fare at the time of you
+            booking.
           </p>
+          <div className="Formfaqbtn">FAQs</div>
         </div>
         <div className="Formsection">
           <form className="Formform" onSubmit={handleSubmit}>
@@ -55,32 +53,32 @@ const Form = () => {
               <div className="Formblock">
                 <input
                   type="text"
-                  name="name"
-                  placeholder="Your Name"
+                  name="firstname"
+                  placeholder="First Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
                 />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  type="text"
+                  name="lastname"
+                  placeholder="Last Name"
                   required
                 />
               </div>
               <div className="Formblock">
                 <input
-                  type="text"
-                  name="text"
-                  placeholder="Type your input here..."
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 />
                 <input
                   type="text"
-                  name="text"
-                  placeholder="Type your input here..."
+                  name="phonenumber"
+                  placeholder="Phone Number"
                   required
                 />
               </div>
@@ -92,9 +90,11 @@ const Form = () => {
                 required
               />
             </div>
-            <button className="Formbutton" type="submit">
-              Send Your Message!
-            </button>
+            <div className="FormButtonContainer">
+              <button className="Formbutton" type="submit">
+                Send Your Message!
+              </button>
+            </div>
           </form>
         </div>
       </div>

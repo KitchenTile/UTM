@@ -11,11 +11,14 @@ const Hero = () => {
   return (
     <div className="HeroDiv">
       <img src={Desk} alt="Desk" id="Desk" />
-      <img src={Student} alt="Student" id="Student" />
       <img src={Twirl} alt="Twirl" id="Twirl" />
       <img src={ArrowTwirl} alt="Twirl" id="ArrowTwirl" />
       <img src={OrangeBlob} alt="OrangeBlob" id="OrangeBlob" />
-      <img src={MintBlob} alt="MintBlob" id="MintBlob" />
+      <div className="mintStudent">
+        <img src={Student} alt="Student" id="Student" />
+        <img src={MintBlob} alt="MintBlob" id="MintBlob" />
+      </div>
+
       <div className="HeroSvgTextDiv">
         <img src={Herologo} alt="Herologo" id="Herologo" />
         <div className="textDiv">

@@ -4,7 +4,7 @@ import './BurgerMenu.css';
 import SocialIcons from './SocialIcons';
 
 const BurgerMenu = () => {
-  const [burgerBarState, setBurgerBarState] = useState('burgerBar unclicked');
+  const [burgerBarState, setBurgerBarState] = useState('burgerBar');
   const [menuVisible, setMenuVisible] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
 
@@ -19,7 +19,7 @@ const BurgerMenu = () => {
 
   const toggleMenu = () => {
     setBurgerBarState(
-      burgerBarState === 'burgerBar unclicked'
+      burgerBarState === 'burgerBar unclicked'|| burgerBarState === "burgerBar"
         ? 'burgerBar clicked'
         : 'burgerBar unclicked'
     );
@@ -105,7 +105,7 @@ const BurgerMenu = () => {
           Account
         </a>
 
-        <SocialIcons />
+        <SocialIcons id="socialIcons--mobile"/>
       </div>
     </>
   );

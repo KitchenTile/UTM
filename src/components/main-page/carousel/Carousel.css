@@ -1,0 +1,120 @@
+#root {
+  background-color: white;
+}
+
+.Autocarousel-container {
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+    min-height: 70vh;
+    background-color: white;
+    padding: 100px;
+  }
+  
+  .Autoh1, .Autoh2 {
+    margin: 10px 0;
+    color: #5225EE;
+  }
+  
+  .Autocarousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  
+  .Autocarousel-slide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .Autocarousel-photo-container {
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .Autocarousel-photo {
+    height: 45%;
+    width: auto;
+    max-height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .Autocarousel-subtitle {
+    font-size: 0.6rem;
+    color: #5225EE;
+    margin-top: 5px;
+    padding: 1px;
+  }
+  
+  
+  .Autocarousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .Autodot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Autodot.active {
+    background-color: black;
+  }
+  
+
+  .Autocarousel-btn {
+    background-color: white;
+    color: #FA7A62;
+    border: dashed 2px #FA7A62;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 32px;
+    min-width: 212px;
+    text-decoration: none;
+  }
+  
+  .Autocarousel-btn:hover {
+    background-color: #FA7A62;
+    color: white;
+    border: 2px dashed white;
+  }
+  
+  @media (max-width: 715px) {
+    .Autocarousel-photo {
+      height: 50%;
+      max-width: 60%;
+      max-height: 100%;
+    }
+    .Autocarousel-photo-container {
+      margin: 0;
+    }
+
+    .Autocarousel-container {
+      padding: 5px;
+    }
+  }
+
+
+  @media (max-width: 425px) {
+
+    .Autoh1 {
+      font-size: 25px;
+    }
+
+    .Autoh2 {
+      font-size: 20px;
+      width: 100%;
+    }
+  }
