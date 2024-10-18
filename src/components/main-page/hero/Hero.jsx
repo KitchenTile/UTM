@@ -6,19 +6,17 @@ import Twirl from '../../../assets/SVGs/Twirl.svg';
 import ArrowTwirl from '../../../assets/SVGs/ArrowTwirl.svg';
 import Desk from '../../../assets/SVGs/Desk.svg';
 import Student from '../../../assets/SVGs/Student.svg';
+import ExpandableSVG from './ExpandableSVG';
 
 const Hero = () => {
   return (
     <div className="HeroDiv">
+      <ExpandableSVG src={MintBlob} id="MintBlob"/>
+      <ExpandableSVG src={OrangeBlob} id="OrangeBlob"/>
       <img src={Desk} alt="Desk" id="Desk" />
       <img src={Twirl} alt="Twirl" id="Twirl" />
       <img src={ArrowTwirl} alt="Twirl" id="ArrowTwirl" />
-      <img src={OrangeBlob} alt="OrangeBlob" id="OrangeBlob" />
-      <div className="mintStudent">
-        <img src={Student} alt="Student" id="Student" />
-        <img src={MintBlob} alt="MintBlob" id="MintBlob" />
-      </div>
-
+      <img src={Student} alt="Student" id="Student" />
       <div className="HeroSvgTextDiv">
         <img src={Herologo} alt="Herologo" id="Herologo" />
         <div className="textDiv">

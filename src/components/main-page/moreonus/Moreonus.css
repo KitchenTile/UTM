@@ -1,12 +1,14 @@
 .moreOnUsContainer {
     position: relative;
-    height: calc(100vh - 5.5em);
+    min-height: 100vh;
     background-color: var(--red);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100vw;
+    padding: 100px 0;
+
 }
 
 .moreOnUsContainer img{
@@ -76,7 +78,7 @@
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
 
     .moreOnUsContainer {
         background-color: var(--red);
@@ -89,7 +91,6 @@
     }
 
 
-
     .moreOnUsText {
         display: flex;
         flex-direction: column;
@@ -97,6 +98,7 @@
         width: 100vw;
         text-align: center;
         max-width: 90%;
+        height: 400px;
     }
 
     .moreOnUsText h1{
@@ -132,7 +134,7 @@
 
     .moreOnUsContainer  {
         height: 100%;
-        padding: 100px 0;
+        padding: 50px 0;
     }
     
 }

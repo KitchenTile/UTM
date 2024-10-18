@@ -3,7 +3,8 @@ import "./Form.css";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
     message: "",
   });
@@ -55,7 +56,7 @@ const Form = () => {
                   type="text"
                   name="firstname"
                   placeholder="First Name"
-                  value={formData.name}
+                  value={formData.firstname}
                   onChange={handleChange}
                   required
                 />
@@ -63,6 +64,8 @@ const Form = () => {
                   type="text"
                   name="lastname"
                   placeholder="Last Name"
+                  value={formData.lastname}
+                  onChange={handleChange}
                   required
                 />
               </div>

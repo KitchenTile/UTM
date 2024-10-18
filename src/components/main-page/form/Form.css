@@ -264,6 +264,17 @@
   }
 }
 
+@media (max-width: 682px) {
+  .Formblock {
+    flex-direction: column;
+  }
+  .Formblock input{
+    width: 70%;
+    align-self: center;
+    text-align: center;
+  }
+}
+
 @media (max-width: 425px) {
   .FormtextSection h1 {
     font-size: 25px;

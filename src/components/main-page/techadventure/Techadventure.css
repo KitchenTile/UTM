@@ -57,17 +57,11 @@
 
 }
 
-
-
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 915px) {
 
     .techAdventureContainer{
-        background-color: var(--blue);
-        display: flex;
         flex-direction: column;
         padding:70px 0;
-        gap: 70px;
-        justify-content: center;
         align-items: center;
     }
 
@@ -76,13 +70,13 @@
     }
 
     .textContainer {
-        max-width: 80vw;
+        max-width: 60vw;
         text-align: center;
 
     }
     
     .textContainer h1{
-        font-size: 30px;
+        font-size: 36px;
         line-height: 36px;
     }
 
@@ -90,10 +84,20 @@
         font-size: 18px;
         margin-block: 1.5em;
     }
+    
+}
 
-    .textContainer button{
-        width: 100%;
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .textContainer {
+        max-width: 80vw;
     }
     
+    .textContainer h1{
+        font-size: 30px;
+    }
 }
 

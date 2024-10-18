@@ -1,5 +1,4 @@
 .servicesContainer {
-    height: calc(100vh - 5.5em);
     position: relative;
     background-color: var(--blue);
     display: flex;
