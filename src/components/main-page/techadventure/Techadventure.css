@@ -2,9 +2,8 @@
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
-    padding: 100px;
-    gap: 70px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .textContainer {
@@ -15,12 +14,29 @@
     max-height: 283px;
 }
 
+.imgContainer {
+    display: flex;
+    max-width: 800px;
+}
+
 .imgContainer img{
     max-width: 50vw;
 }
 
+.techAdventureContainer .textContainer {
+    padding: 0 50px;
+    max-width: 500px;
+    max-height: none;
+}
+
+.techAdventureContainer .textContainer h1{
+    font-size: 44px;
+    line-height: 46px;
+}
+
+
 .textContainer h1{
-    font-size: 40px;
+    font-size: 44px;
     line-height: 46px;
 }
 
@@ -33,28 +49,32 @@
     width: 50%;
 }
 
+#techAdventureMobile {
+    display: none;
+}
 
-@media only screen and (max-width: 1086px) {
 
-    .textContainer {
+@media only screen and (max-width: 1200px) {
+
+    .techAdventureContainer .textContainer {
         max-width: 50%;
+        gap: 20px;
     }
     
-    .textContainer h1{
+    .techAdventureContainer .textContainer h1{
         font-size: 30px;
         line-height: 36px;
     }
 
-    .textContainer p{
-        font-size: 18px;
+    .techAdventureContainer .textContainer p{
+        font-size: 15px;
         margin-block: 0.7em;
     }
 
-    .textContainer button{
-        width: 100%;
+    .techAdventureContainer .textContainer button{
+        width: 50%;
     }
     
-
 }
 
 @media only screen and (max-width: 915px) {
@@ -65,24 +85,45 @@
         align-items: center;
     }
 
+    .imgContainer{
+        justify-content: center;
+        width: 70%;
+    }
+
+
     .imgContainer img{
         max-width: 80vw;
     }
 
-    .textContainer {
-        max-width: 60vw;
-        text-align: center;
-
+    .techAdventureContainer .textContainer {
+        margin-block: 5vh;
+        max-width: 90vw;
+        text-align: center;    
+        align-items: center;
+ 
     }
     
-    .textContainer h1{
+    .techAdventureContainer .textContainer h1{
         font-size: 36px;
         line-height: 36px;
     }
 
-    .textContainer p{
+    .techAdventureContainer .textContainer p{
         font-size: 18px;
         margin-block: 1.5em;
+    }
+
+    .techAdventureContainer .textContainer button{
+        width: 50%;
+    }
+
+    #techAdventureMobile {
+        display: inline;
+        width: 100%;
+    }
+
+    #techAdveture {
+        display: none;
     }
     
 }
@@ -92,12 +133,12 @@
 
 @media only screen and (max-width: 600px) {
 
-    .textContainer {
-        max-width: 80vw;
+    .techAdventureContainer .textContainer {
+        max-width: 90vw;
     }
-    
-    .textContainer h1{
-        font-size: 30px;
+
+    .techAdventureContainer .textContainer button{
+        width: auto;
     }
 }
 

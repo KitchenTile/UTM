@@ -30,7 +30,7 @@
 }
 
 .moreOnUsText p{
-    font-size: 16px;
+    font-size: 20px;
     margin-block: 3em;
     text-align: justify;
 }
@@ -72,13 +72,13 @@
     }
 
     .moreOnUsText p{
-        font-size: 16px;
+        font-size: 20px;
         margin: 1em 0 2em 0;
         text-align: justify;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     .moreOnUsContainer {
         background-color: var(--red);

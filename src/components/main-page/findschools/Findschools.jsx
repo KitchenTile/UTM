@@ -8,7 +8,7 @@ const FindSchools = () => {
   );
 
   return (
-    <div className="findSchoolsContainer">
+    <div className="findSchoolsContainer" id='findSchools'>
       <div className="mapInputDiv">
         <div className="mapDiv">
           <iframe

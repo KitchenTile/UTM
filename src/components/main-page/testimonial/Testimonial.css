@@ -1,4 +1,3 @@
-
 :root {
     /* Colours */
     --blue: #5225EE;
@@ -31,7 +30,7 @@
 .Testimonial-container {
     text-align: center;
     padding: 50px;
-    min-height: 92vh; /* Takes up the full viewport height */
+    min-height: 60vh; /* Takes up the full viewport height */
     justify-content: center;
     background-color: #feffff;
     position: relative;

@@ -1,0 +1,105 @@
+/* Container and Title */
+:root {
+    --red : #F47A62;
+    --yellow: #FDBA17;
+    --white: #DDDDDD;
+    --purple: #5225EE;
+}
+
+
+.faq-body {
+    padding: 30px;
+    min-height: 100vh;
+}
+.faq-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .faq-question {
+    font-size: 25px;
+  }
+
+  
+  .faq-container h1 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 1em;
+    color: var(--purple);
+  }
+  
+  /* Tabs */
+  .faq-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+  }
+  
+  .faq-tab {
+    font-size: 1.2em;
+    padding: 0.5em;
+    cursor: pointer;
+    color: var(--yellow);
+    border-bottom: 2px dashed transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-tab.active {
+    color: var(--red);
+    border-bottom: 2px dotted var(--red);
+    font-weight: bold;
+  }
+  
+  /* FAQ Questions */
+  .faq-content {
+    margin-top: 1em;
+    text-align: left;
+  }
+  
+  .faq-question {
+    padding: 0.5em 0;
+  }
+  
+  .faq-question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--yellow);
+    transition: all 0.3s ease;
+  }
+  
+  .faq-question-header.open {
+    color: var(--red); /* Change this color as desired */
+  }
+  
+  .faq-answer {
+    padding: 0.5em 0;
+    color: #252525;
+    font-size: 15px;
+  }
+  
+  /* Toggle Button */
+  .faq-toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--red);
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .faq-toggle-button:hover{
+    background-color: white;
+  }
+  
+  /* Separator */
+  .faq-hr {
+    border: none;
+    border-top: 3px dashed var(--yellow);
+    margin: 0.5em 0;
+  }
+  

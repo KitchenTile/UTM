@@ -1,0 +1,117 @@
+.HeroDiv#TChero{
+    background-color: var(--green);
+}
+
+.HeroSvgTextDiv#TChero {
+    gap: 10vh;
+}
+
+.HeroSvgTextDiv#ASChero {
+    gap: 5vh;
+}
+
+.HeroSvgTextDiv#TChero img{
+    width: 48vw;
+}
+
+.HeroSvgTextDiv#TChero button{
+    width: 45%;
+    font-size: 1.4em;
+    padding: 0.2em 0.4em;
+}
+
+.expandableImage#TChero, .expandableImage#ASChero, .expandableImage#FAQhero {
+    position: absolute;
+    bottom: -8vh;
+    left: -7vw;
+    width: 36vw;
+}
+
+.HeroDiv#TChero #OrangeBlob {
+    width: 50vw;
+}
+
+
+/* AFTER SCHOOL CLUB AND BREAKFAST CLUB */
+
+.HeroDiv#ASChero{
+    background-color: var(--red);
+}
+
+/* FAQ hero */
+
+.HeroDiv#FAQhero{
+    background-color: var(--blue);
+}
+
+@media only screen and (max-width: 768px) {
+
+    #BlueBlob {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 32vw;
+    }
+
+    .HeroSvgTextDiv#TChero button{
+        width: 45vw;
+        font-size: 1.4em;
+        padding: 0.2em 0.4em;
+    }
+
+    .HeroSvgTextDiv#TChero img{
+        min-width: 75vw;
+    }
+    
+
+}
+
+@media only screen and (max-width: 425px) {
+
+
+    .HeroSvgTextDiv#TChero #techCampLogo{
+        display: inline;
+        min-width: 90vw;
+    }
+
+
+    .HeroDiv#TChero img {
+        display: none;
+    }
+
+
+
+    .textDiv {
+        width: 90vw;
+    }
+
+    .textDiv h2 {
+        font-size: 18px;
+    }
+
+    .HeroSvgTextDiv#TChero button{
+        width: 50vw;
+        font-size: 1.4em;
+        padding: 0.2em 0.4em;
+    }
+
+}
+
+
+
+@media only screen and (max-height: 690px) {
+
+    .HeroSvgTextDiv#TChero  {
+        gap: 5vh;
+    }
+
+    .HeroSvgTextDiv#TChero h2{
+        font-size: 18px;
+    }
+
+    .HeroDiv#ASChero{
+        min-height: unset;
+        height: 700px;
+    }
+    
+}

@@ -4,6 +4,7 @@ import ServicePic1 from '../../../assets/servicePictures/ServicePic1.svg';
 import ServicePic2 from '../../../assets/servicePictures/ServicePic2.svg';
 import ServicePic3 from '../../../assets/servicePictures/ServicePic3.svg';
 import ServicePic4 from '../../../assets/servicePictures/ServicePic4.svg';
+import { Link } from 'react-router-dom';
 
 const OurServices = () => {
   const servicePictures = [ServicePic1, ServicePic2, ServicePic3, ServicePic4];
@@ -11,12 +12,12 @@ const OurServices = () => {
   const buttonTitles = [
     'Tech Club',
     'Breakfast Club',
-    'After School Care',
+    'After School Club',
     'Tech Camp',
   ];
 
   return (
-    <div className="servicesContainer">
+    <div className="servicesContainer" id='services'>
       <img src={ReverseTwirl} alt="ReverseTwirl" id="ReverseTwirl" />
       <div className="textPicContainer">
         <div className="mainText">
@@ -37,12 +38,14 @@ const OurServices = () => {
                 id={`ServicePic${index}`}
                 alt={`Service ${index}`}
               />
-              <button
-                /*onClick={}*/ title={buttonTitles[index]}
-                id={`Button${index}`}
-              >
-                {buttonTitles[index]}
-              </button>
+              <Link to={`/${buttonTitles[index].replace(/\s/g, '-').toLowerCase()}`} className='button'>
+                <button
+                  title={buttonTitles[index]}
+                  id={`Button${index}`}
+                >
+                  {buttonTitles[index]}
+                  </button>
+              </Link>
             </div>
           ))}
         </div>

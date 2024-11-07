@@ -1,6 +1,7 @@
 import './Moreonus.css';
 import moreOnUsPicture from '../../../assets/moreOnUsPicture/moreOnUsPicture.svg';
 import MoreOnUsTwirls from '../../../assets/moreOnUsPicture/MoreOnUsTwirls.svg';
+import { Link } from 'react-router-dom';
 
 const MoreOnUs = () => {
   return (
@@ -13,9 +14,11 @@ const MoreOnUs = () => {
           Care, Breakfast Clubs and thrilling Holiday Tech Camps in primary
           schools across the UK as well as new Online Learning Courses.{' '}
         </p>
-        <button /*onClick={}*/ title="learnMore">
-          More about U Teach Mi
-        </button>
+        <Link as={ Link } to={"/about-us"} >
+          <button title="learnMore">
+            More about U Teach Mi
+          </button>
+        </Link>
       </div>
       <img src={moreOnUsPicture} alt="moreOnUsPicture" id="moreOnUsPicture" />
     </div>

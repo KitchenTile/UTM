@@ -1,0 +1,45 @@
+.instructorsContainer {
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.instructorsContainer button {
+    width: auto;
+    font-weight: 700;
+}
+
+
+.subtitle{
+    font-size: 20px;
+    max-width: 55%;
+    text-align: center;
+}
+
+
+.instructorsGrid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    margin: 10vh;
+    max-width: 1200px;
+    width: 55%;
+    gap: 4vh;
+}
+
+
+.instructorContainer {
+    text-align: center;
+}
+
+.instructorContainer h1{
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.instructorContainer p{
+    font-size: 20px;
+}

@@ -54,9 +54,9 @@
 }
 
 .Formfaqbtn {
-  padding: 10px 15px;
+  padding: 5px 20px;
   letter-spacing: 2px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   border: 2px dashed var(--background-table);
   border-radius: 32px;
@@ -102,6 +102,16 @@
   resize: none;
   color: black;
   box-sizing: border-box;
+  font-family: 'Nunito';
+  transition: all 0.3s ease;
+}
+
+.Formblock input:focus, .Forminput textarea:focus {
+  border: 2px solid #5225EE;
+  outline: 2px solid #5225EE;
+  color: #5225EE;
+  font-weight: bold;
+  font-family: 'Nunito';
 }
 
 .Forminput textarea {
@@ -210,53 +220,63 @@
   body {
     font-size: calc(var(--base-font-size) * 0.9);
   }
-
+  
   .Formcontainer {
     flex-direction: column;
     align-items: center;
     padding: 10px;
     justify-content: center;
   }
-
-  .FormtextSection p, .FormtextSection h2, .Formfaqbtn {
-    display: none;
-  }
-
-  .Formh1 {
-    display: inline-block;
-  }
-
+  
   .FormtextSection {
     text-align: center;
   }
-
+  
+  .FormtextSection p,
+  .FormtextSection h2,
+  .Formfaqbtn {
+    display: none;
+  }
+  
+  .Formh1 {
+    display: inline-block;
+  }
+  
   .Formsection {
     width: 100%;
     justify-content: center;
     align-self: center;
-    margin-top: 20px;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
-
+  
   .Formform {
-    width: 100%; 
+    width: 100%;
     min-width: 300px;
     height: auto;
     aspect-ratio: 0.96;
     padding: 20px;
+    background-color: var(--yellow);
+    border: none;
   }
-
+  
   .Forminput textarea {
-    height: 120px;
+    height: 20vh;
     width: 100%;
     box-sizing: border-box;
   }
-
+  
   .Formblock {
     width: 100%;
+    flex-direction: column;
     gap: 20px;
   }
-
+  
+  .Formblock input {
+    width: 70%;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
   .Formbutton {
     width: 100%;
     margin-top: 20px;
@@ -264,24 +284,11 @@
   }
 }
 
-@media (max-width: 682px) {
-  .Formblock {
-    flex-direction: column;
-  }
-  .Formblock input{
-    width: 70%;
-    align-self: center;
-    text-align: center;
-  }
-}
 
 @media (max-width: 425px) {
   .FormtextSection h1 {
-    font-size: 25px;
+    font-size: 20px;
     width: 100%;
   }
 
-  .FormtextSection {
-    min-width: 300px;
-  }
 }

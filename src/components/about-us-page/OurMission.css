@@ -1,0 +1,39 @@
+.missionContainer{
+    display: flex;
+    position: relative;
+    background-color: var(--yellow);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.imageTextContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+#missionImg{
+    width: 40vw;
+}
+
+.textContainer {
+    justify-content: normal;
+}
+
+.textContainer p{
+    text-align: justify;
+}
+
+.textContainer h1{
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 915px) {
+    .textContainer p {
+        font-size: 15px;
+        margin-block: 1.5em;
+
+    }
+}

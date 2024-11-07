@@ -1,0 +1,21 @@
+.wwhContainer {
+    position: relative;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+
+
+.videoContainer {
+    background-color: var(--red);
+    margin-block: 5em;
+    width: 64vw;
+    height: 40vw;
+    border-radius: 50px;
+}

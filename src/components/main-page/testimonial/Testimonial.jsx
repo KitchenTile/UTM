@@ -8,6 +8,15 @@ import slide3 from '../../../assets/testimonials/rightimg.png';
 const TestimonialCard = ({ slides, className, text }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+
+  {/*Needs fix*/}
+  const scrollToSection = () => {
+    const section = document.getElementsByClassName("servicesContainer")[0];
+    if (section) {
+      section.scrollIntoView();
+    }
+};
+
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
   };

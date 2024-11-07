@@ -1,0 +1,125 @@
+.navLinks {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 3em;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.2em;
+    font-weight: 700;
+    gap: 20px;
+}
+
+.navLinks a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navLinks a:hover {
+    color: #FDBA17;
+}
+
+.navLinks a:hover#account {
+    color: #F47A62;
+}
+
+.navLinks a:hover#aboutus {
+    color: #F47A62;
+}
+
+
+/* sliding submenues */
+.slidingServices{
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 1em 0 1em 0.5em; 
+    transition: background-color 0.5s ease-in-out; 
+}
+
+/* when hovered */
+
+.slidingServices.hovered {
+    color: var(--yellow); 
+    background-color: var(--red); 
+}
+
+.menu {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 0.8em;
+    width: 100%;
+    opacity: 1;
+    border-radius: 50px;
+    /* height: 0px;  */
+}
+
+.menu#side {
+    opacity: 1;
+    padding: 0.5em;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1em;
+    transition: width 0.5s ease-in-out;
+}
+
+.link{
+    color: black;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-weight: 500 !important;
+}
+
+
+.show#side{
+    width: auto;
+}
+
+.hidden#side {
+    width: 0px
+}
+
+@media only screen and (max-width: 1342px) {
+
+    .menu#side{
+        width: 200px;
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .show#side{
+        width: 200px;
+    }
+
+    .slidingServices{
+        flex-direction: column;
+        padding: 1em 0;
+        padding-block: 20px;
+        position: absolute;
+        left: -2.5em;
+        top: -20px;
+    }
+
+    .slidingServices .link{
+        margin-right: 0px;
+    }
+
+    .navLinks {
+        align-items: flex-start;
+        position: relative;
+        padding-left: 140px;
+        margin-left: 4em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .navLinks{
+        display: none;
+    }
+}

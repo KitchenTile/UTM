@@ -1,0 +1,39 @@
+
+
+.textContainer#wwh {
+    position: relative;
+    background-color: white;
+    color: var(--red);
+    max-width: none;
+    width: 64vw;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0 2vw;
+}
+
+.topLeft {
+    position: absolute;
+    background-color: var(--red);
+    color: white;
+    padding: 0 25px;
+    border-radius: 30px;
+    left: -1.5vw;
+    top: -1.5vh;
+    transform: rotate(-3deg);
+    transition: all 0.5s;
+}
+
+.textContainer#wwh:hover .topLeft{
+    top: -2vh;
+    transform: rotate(0deg);
+}
+
+
+@media only screen and (max-width: 425px) {
+
+    .textContainer#wwh {
+        width: auto;
+        max-height: none;
+    }
+    
+}

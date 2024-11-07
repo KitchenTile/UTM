@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.css";
+import { Link } from "react-router-dom";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,9 @@ const Form = () => {
             refund according to the rules of your fare at the time of you
             booking.
           </p>
-          <div className="Formfaqbtn">FAQs</div>
+          <Link to={"/faqs"}>
+            <button className="Formfaqbtn">FAQs</button>
+          </Link>
         </div>
         <div className="Formsection">
           <form className="Formform" onSubmit={handleSubmit}>

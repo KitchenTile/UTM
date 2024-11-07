@@ -16,66 +16,47 @@
   color: #5225EE;
 }
 
-.Autocarousel {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 20px 0;
+.infinite-scroll {
   overflow: hidden;
+  white-space: nowrap;
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
 }
 
-.Autocarousel-slide {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+.scrolling-container {
+  gap: 25px;
+  padding: 30px;
+  display: inline-flex;
+  animation: scroll-left 120s linear infinite; /* Scrolls continuously */
 }
 
 .Autocarousel-photo-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
   text-align: center;
-  margin: 0 10px;
-  width: auto;
+  flex: 0 0 auto;
+  margin: 0px 5px;
 }
 
 .Autocarousel-photo {
+  height: 15vh;
   width: auto;
-  height: 150px;
   display: block;
-  transition: transform 0.5s ease;
+  max-width: 190px;
 }
 
 .Autocarousel-subtitle {
-  font-size: clamp(0.8rem, 1vw, 1rem);
-  text-align: center;
-  color: #5225EE;
+  font-size: 0.8rem;
   margin-top: 5px;
-  max-width: none;
-  word-wrap: break-word;
-}
-
-.Autocarousel-dots {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.Autodot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: grey;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.Autodot.active {
-  background-color: black;
+  color: #5225EE;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .Autocarousel-btn {
@@ -97,85 +78,26 @@
   border: 2px dashed white;
 }
 
-@media (max-width: 768px) {
-
-  .Autocarousel-btn {
-    display: none;
+/* Keyframes for the scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-
-  .infinite-scroll {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    padding: 0;
-  }
-
-  .scrolling-container {
-    display: inline-flex;
-    animation: scroll-left 30s linear infinite;
-  }
-
-  .Autocarousel-photo-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 90px;
-    flex: 0 0 auto;
-    margin: 0 5px;
-  }
-
-  .Autocarousel-photo {
-    max-height: 8vh;
-    width: auto;
-    display: block;
-  }
-
-  .Autocarousel-subtitle {
-    font-size: 0.8rem;
-    text-wrap: wrap;
-    margin-top: 5px;
-    color: #5225EE;
-    width: 100%;
-    text-align: center;
-  }
-
-  .Autoh2 {
-    margin-bottom: 50px;
-  }
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .Autodot {
-    display: none;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@media (min-width: 768px) {
+/* Remove specific styles for larger screens */
+@media (max-width: 768px) {
+  /* We remove display:none to make sure the mobile carousel is always visible */
   .infinite-scroll,
   .scrolling-container {
-    display: none;
+    display: flex;
   }
 
   .Autocarousel {
-    display: block;
-  }
-
-  .Autocarousel-slide {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    display: none; /* Hide the old desktop carousel */
   }
 
   .Autocarousel-photo-container {
@@ -187,15 +109,12 @@
   }
 
   .Autocarousel-photo {
+    height: 8vh;
     max-height: 150px;
   }
 
   .Autocarousel-subtitle {
     font-size: 1rem;
     text-align: center;
-  }
-
-  .Autodot {
-    display: inline-block;
   }
 }
